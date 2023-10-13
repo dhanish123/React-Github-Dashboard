@@ -1,0 +1,207 @@
+body {
+  background: antiquewhite;
+}
+.git {
+  text-align: center;
+
+  &__head {
+    color: grey;
+    &-searchbox {
+      padding: 8px;
+      border-radius: 20px;
+      width: 50%;
+    }
+  }
+}
+.allcards {
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+  padding: 30px;
+  &__card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: cornsilk;
+  }
+  &__cardhead {
+    color: #7e6d6d;
+    font-size: 16px !important;
+    margin: 10px 0;
+  }
+  &__cardnum {
+    display: block;
+
+    margin: 0;
+    font-size: 28px;
+  }
+}
+.section3 {
+  display: flex;
+  justify-content: space-evenly;
+  &__userhead {
+    color: darkolivegreen;
+    font-family: auto;
+  }
+  &__carduser {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 500px;
+    height: 246px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: ghostwhite;
+
+    img {
+      width: 97px;
+      margin-top: 15px;
+    }
+  }
+  &__username {
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: 700;
+  }
+  &__userabout {
+    font-size: 16px;
+    font-family: ui-monospace;
+    font-weight: 500;
+  }
+  &__userloc {
+    font-size: 12px;
+    font-family: cursive;
+    font-weight: 500;
+  }
+  &__table {
+    color: darkolivegreen;
+    font-family: auto;
+  }
+  &__table-container {
+    max-height: 260px; /* Adjust height as needed */
+    overflow-y: hidden;
+    max-width: 627px;
+    background: ghostwhite;
+  }
+  &__tablehead {
+    color: darkred;
+  }
+  &__tableurl {
+    color: black;
+    text-decoration: none;
+  }
+  &__userfollower {
+    &__tablehead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-searchbox {
+        height: 26px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 148px;
+}
+.chart {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #d2b48d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #ab0f0f;
+}
+
+@media (max-width: 768px) {
+  table td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+    width: 148px;
+  }
+  .chart {
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .allcards {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    &__card {
+      width: 250px;
+    }
+  }
+
+  .section3 {
+    flex-direction: column;
+    align-items: center;
+    &__carduser {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 148px;
+  }
+  .chart {
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .section3 {
+    flex-direction: column;
+    align-items: center;
+    &__carduser {
+      width: 500px;
+      height: auto;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .section3 {
+    flex-direction: column;
+    align-items: center;
+    &__carduser {
+      height: auto;
+    }
+  }
+}
